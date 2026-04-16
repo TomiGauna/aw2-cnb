@@ -6,31 +6,13 @@
 
 // 3 - Leer datos del archivo guardado
 
-import fsp from 'node:fs/promises';
-import path  from 'node:path';
+import { dataExtractor } from "./utils/dataExtractor.mjs";
+import { readerAndWriter } from "./utils/readerAndWriter.mjs";
 
 try {
-    const resp = await fetch('https://api.escuelajs.co/api/v1/users');
-    const users = await resp.json(); // <-- convierte texto JSON a objeto JavaScript
-
-    const modifiedUsers = users.map((elemento) => {
-        
-        const changedUser = {
-            id: elemento.id,
-            email: elemento.email,
-            name: elemento.name
-        }
-        return changedUser
-    })
-
-    // Escritura del archivo
-    const root = path.resolve('usuarios.json'); // --> Resuelve ruta absoluta
-    const stringedData = JSON.stringify(modifiedUsers, null, 4);
-    await fsp.writeFile(root, stringedData)
-
-    //Lectura de archivo
-    const localUsers = await fsp.readFile(root, 'utf-8');
-    console.log(localUsers);
+    const changedUsers = await dataExtractor();
+    const users = await readerAndWriter(changedUsers);
+    console.log('result: ' + users);
 } catch (error) {
-    console.log(error)
+    console.log(`Se produjo un error: ${error.message}`);
 }
