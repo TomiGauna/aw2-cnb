@@ -68,5 +68,55 @@
                 "avatar": "image.exam",
                 "creationAt": "2026-04-21T21:03:22.000Z",
                 "updatedAt": "2026-04-21T21:03:22.000Z"
+        },
+        {
+                "id": 9,
+                "email": "nick@gmail.com",
+                "password": "1234",
+                "name": "nick",
+                "role": "customer",
+                "avatar": "https://picsum.photos/800",
+                "creationAt": "2026-04-21T23:01:28.000Z",
+                "updatedAt": "2026-04-21T23:01:28.000Z"
+        },
+        {
+                "id": 10,
+                "email": "nick@gmail.com",
+                "password": "123456",
+                "name": "nick",
+                "role": "customer",
+                "avatar": "https://picsum.photos/800",
+                "creationAt": "2026-04-21T23:03:40.000Z",
+                "updatedAt": "2026-04-21T23:03:40.000Z"
+        },
+        {
+                "id": 11,
+                "email": "intjivan@gmail.com",
+                "password": "123123123",
+                "name": "привет",
+                "role": "customer",
+                "avatar": "https://placehold.co/200x200/e8e5df/1a1916?text=User",
+                "creationAt": "2026-04-21T23:06:01.000Z",
+                "updatedAt": "2026-04-21T23:06:01.000Z"
+        },
+        {
+                "id": 12,
+                "email": "TestFran23@test.com",
+                "password": "123456789",
+                "name": "TestFran23",
+                "role": "customer",
+                "avatar": "https://picsum.photos/id/23",
+                "creationAt": "2026-04-21T23:19:22.000Z",
+                "updatedAt": "2026-04-21T23:19:22.000Z"
+        },
+        {
+                "id": 13,
+                "email": "TestFran0@test.com",
+                "password": "123456789",
+                "name": "TestFran0",
+                "role": "customer",
+                "avatar": "https://picsum.photos/id/0/200/300",
+                "creationAt": "2026-04-21T23:25:27.000Z",
+                "updatedAt": "2026-04-21T23:25:27.000Z"
         }
 ]
