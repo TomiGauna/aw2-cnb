@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello!!! Welcome</h1>
+    <img src="./recursos/imagenes/******" alt="">
+    <script>
+
+        async function getApi() {
+            const resp = await fetch('https://69f00888112e1b968e2526e5.mockapi.io/api/v1/productos');
+            const products = await resp.json();
+            console.log(products);
+            products.map((product) => {
+                console.log(product.imagen)
+            })
+        };
+
+        getApi();
+
+    </script>
+</body>
+</html>
