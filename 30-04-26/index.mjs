@@ -16,7 +16,7 @@ const products = [
     }
 ]
 
-// Parámtros de ruta
+// Parámetros de ruta
 
 app.get('/products', (req, res) => {
     res.json(products)
@@ -31,7 +31,7 @@ app.get('/products/:id', (req, res) => {
 
 app.get('/products_dto/:discount', (req, res) => {
     const discount = Number(req.params.discount);
-    
+
     const productsWithDiscount = products.map(prod => {
         const op = prod.precio * (discount / 100)
         return {
