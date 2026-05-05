@@ -11,23 +11,21 @@ const middleware = async (req, res, next) => {
         const usuario = await codigoApi.json();
         const codigoProy = Number(req.params.codigo);
 
-        ///validacion
+        ///validación
         if (usuario.codigo === codigoProy) {
             return next();
-        }
+        };
 
-        ///envio de mensaje de error
-        res.status(400).json({ mensaje: 'El código es INCORRECTO' });
+        ///envío de mensaje de error
+        res.status(400).json({ mensaje: 'El código es INCORRECTO❌' });
     }
     catch (error) {
         console.log(`Error: ${error.message}`);
     }
-
 }
 
 servidor.get('/:codigo', middleware, (req, res) => {
-
-    res.status(200).json({ mensaje: 'El código es CORRECTO!!!' })
+    res.status(200).json({ mensaje: 'El código es CORRECTO!!!✅' });
 })
 
 servidor.listen(port, () => {
